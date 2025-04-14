@@ -22,15 +22,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: white;
+        background: rgb(240, 253, 255);
         border-radius: 15px;
-        border: 1px solid blue;
-        box-shadow: 2px 2px 2px 2px rgba(78, 85, 86, 0.764);
+        box-shadow: 2px 2px 2px 2px rgba(82, 88, 88, 0.411);
     }
 
     div.elegir {
         padding: 15px;
-        background: rgb(221, 237, 237);
+        background: rgb(186, 248, 250);
         width: 100%;
         box-sizing: border-box;
         border-radius: 15px 15px 0 0;
@@ -41,8 +40,9 @@
     }
 
     div.elegir2 {
+        top: 20px;
         left: 53px;
-        background-color: aqua;
+        background-color: rgb(158, 223, 248);
         position: absolute;
         width: 200px;
         height: 70px;
@@ -56,6 +56,8 @@
         padding-inline-start: 20px;
         padding-inline-end: 20px;
         z-index: 2;
+        color: black;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
 
@@ -98,7 +100,7 @@
         position: relative;
         outline: none;
         border-radius: 8px;
-        border: 2px solid rgb(0, 132, 255);
+        border: 2px solid rgb(36, 115, 129);
         font-size: 23px;
         padding-left: 8px;
         padding-right: 8px;
@@ -114,13 +116,18 @@
         background: white;
     }
 
+    input[type="email"]:focus, input[type="password"]:focus{
+        box-shadow: 1px 1px 2px 2px rgb(149, 218, 250);
+        border-color: rgb(144, 217, 252);
+    }
+
     label {
         left: 10px;
         top: 11px;
         position: absolute;
         transition: 0.4s ease all;
         font-size: 23px;
-        color: rgb(50, 139, 149);
+        color: rgb(29, 70, 124);
         font-weight: bold;
     }
 
@@ -128,11 +135,22 @@
         width: 200px;
         height: 40px;
         font-size: 25px;
-        border-radius: 8px;
+        font-weight: bold;
+        border-radius: 15px;
         outline: none;
-        border: 1px solid rgb(0, 42, 255);
-        box-shadow: 1px 1px 2px 2px rgb(74, 130, 130);
-        color: blue;
+        background-color: none;
+        border: 2px solid rgb(78, 199, 255);
+        color: rgb(14, 65, 88);
+        transition: all 0.3s ease;
+        background-color: rgb(78, 199, 255);
+    }
+
+    button:hover{
+        transform: scale(1.1);
+        border: 1px solid rgb(161, 220, 255);
+        cursor: pointer;
+        box-shadow: 1px 1px 2px 2px rgba(149, 218, 250, 0.473);
+
     }
 </style>
 
@@ -185,14 +203,16 @@
 
         loguin.addEventListener("click", function () {
             elegir.style.left = "53px";
+            elegir.style.top = "20px";
             elegir.style.transition = "all 0.8s ease";
-            elegir.style.background = "aqua";
+            elegir.style.background = "rgb(158, 223, 248)";
 
             formSlider.style.transform = "translateX(0px)";
         });
 
         registro.addEventListener("click", function () {
             elegir.style.left = "247px";
+            elegir.style.top = "20px";
             elegir.style.transition = "all 0.8s ease";
             elegir.style.background = "rgb(5, 211, 211)";
 
